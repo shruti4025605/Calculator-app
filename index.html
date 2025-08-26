@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sleek Calculator</title>
+  <link rel="stylesheet" href="stylec.css" />
+</head>
+<body>
+  <div class="calc" id="calc">
+    <div class="topbar">
+      <button class="back" onclick="goBack()">← Back</button>
+      <button class="toggle" onclick="toggleTheme()">🌙/☀️</button>
+    </div>
+
+    <div class="display">
+      <div class="brand">Calc · Pro</div>
+      <input id="screen" class="screen" type="text" value="0" readonly>
+    </div>
+
+    <div class="keys">
+      <button class="ac" data-action="ac">AC</button>
+      <button class="ok" data-action="del">DEL</button>
+      <button class="op" data-val="%">%</button>
+      <button class="op" data-val="/">÷</button>
+
+      <button data-val="7">7</button>
+      <button data-val="8">8</button>
+      <button data-val="9">9</button>
+      <button class="op" data-val="*">×</button>
+
+      <button data-val="4">4</button>
+      <button data-val="5">5</button>
+      <button data-val="6">6</button>
+      <button class="op" data-val="-">−</button>
+
+      <button data-val="1">1</button>
+      <button data-val="2">2</button>
+      <button data-val="3">3</button>
+      <button class="op" data-val="+">+</button>
+
+      <button class="span-2" data-val="0">0</button>
+      <button data-val=".">.</button>
+      <button class="eq" data-action="eq">=</button>
+    </div>
+
+    <div class="foot">Keyboard: 0–9, + − × ÷, Enter= =, Backspace=DEL, Esc=AC</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+:root {
+  --bg:#0f172a;
+  --card:rgba(255,255,255,0.08);
+  --glass:rgba(255,255,255,0.15);
+  --text:#e2e8f0;
+  --muted:#94a3b8;
+  --op:#2563eb;
+  --danger:#ef4444;
+  --ok:#10b981;
+  --accent:#22d3ee;
+}
+
+body.light {
+  --bg:#f8fafc;
+  --card:rgba(0,0,0,0.05);
+  --glass:rgba(0,0,0,0.08);
+  --text:#1e293b;
+  --muted:#64748b;
+  --op:#1d4ed8;
+  --danger:#dc2626;
+  --ok:#059669;
+  --accent:#0ea5e9;
+}
+
+* { box-sizing: border-box; font-family: Inter, sans-serif; }
+
+body {
+  margin:0; min-height:100vh; display:grid; place-items:center;
+  background: var(--bg); color:var(--text); transition: all .3s ease;
+}
+
+.calc {
+  width:min(92vw,420px);
+  backdrop-filter: blur(14px);
+  background:var(--card);
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+
+.topbar {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:10px 16px; font-size:14px;
+}
+
+.toggle, .back {
+  border:none; background:var(--glass);
+  padding:6px 10px; border-radius:8px; cursor:pointer;
+  color:var(--text); font-size:13px;
+}
+
+.display { padding:12px 16px 6px; }
+.brand { font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); }
+.screen {
+  width:100%; border:none; outline:none;
+  background:transparent; color:var(--text);
+  font-size:36px; text-align:right; padding:8px 6px 0;
+}
+
+.keys {
+  display:grid; grid-template-columns: repeat(4, 1fr);
+  gap:10px; padding:16px;
+}
+
+button {
+  height:58px; border:none; border-radius:14px;
+  cursor:pointer; font-size:18px;
+  color:var(--text); background:var(--glass);
+  transition: transform .05s ease, background .2s ease;
+}
+
+button:hover { background:rgba(255,255,255,0.1); }
+button:active { transform:translateY(1px) scale(.98); }
+
+.op{ background: linear-gradient(180deg, rgba(37,99,235,.35), rgba(37,99,235,.2)); }
+.eq{ background: linear-gradient(180deg, rgba(34,211,238,.5), rgba(34,211,238,.25)); }
+.ac{ background: linear-gradient(180deg, rgba(239,68,68,.45), rgba(239,68,68,.25)); }
+.ok{ background: linear-gradient(180deg, rgba(16,185,129,.45), rgba(16,185,129,.25)); }
+.span-2{ grid-column: span 2; }
+.foot{ text-align:center; color:var(--muted); font-size:12px; padding:6px 0 14px; }
