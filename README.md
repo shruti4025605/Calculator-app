@@ -15,7 +15,8 @@ It showcases my skills, projects, and contact information.
 - JavaScript
 
 ## 🔗 Live Demo
-👉 [Portfolio Website](https://shruti4025605.github.io/Portfolio/)
+👉 [Calculator App](https://shruti4025605.github.io/Calculator-app/)
+
 
 ## 📂 GitHub Repository
 👉 [Source Code](https://github.com/shruti4025605/Portfolio)
